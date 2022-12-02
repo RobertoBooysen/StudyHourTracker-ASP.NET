@@ -1,0 +1,130 @@
+﻿@model IEnumerable<PROG6212_POE_Web_Application.Models.TblModule>
+
+@{
+    ViewData["Title"] = "ViewModules";
+}
+
+<style>
+    /*Styling page(W3Schools,2022)*/
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: #84bce0;
+        color: white;
+    }
+
+    .btn {
+        padding: 5px 12px;
+        font-size: 15px;
+        color: white;
+        background: #84bce0;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .header {
+        width: 100%;
+        margin: 50px auto 0px;
+        color: white;
+        background: #84bce0;
+        text-align: center;
+        border: 1px solid #B0C4DE;
+        border-bottom: none;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: #84bce0;
+        border: none;
+        border-radius: 15px;
+    }
+</style>
+
+<div class="header">
+    <!--The header is allocated on top of the form(CodeWithAwa, 2022)-->
+    <h1>View Modules</h1>
+</div>
+
+<hr />
+
+<p>
+    <a asp-action="AddModules" class="btn">Create New Module</a>  <a class="btn" style="float: right;" asp-area="" asp-controller="Charts" asp-action="ChartOfSelfStudyHours" style="color: #84bce0"><b><b>View Chart</b></b></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleNumberOfCredits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModuleClassHoursPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfWeeks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelfStudyHours)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleNumberOfCredits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModuleClassHoursPerWeek)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfWeeks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SelfStudyHours)
+                </td>
+                <td>
+                    <a asp-action="EditModules" asp-route-id="@item.ModulesId">Edit</a> |
+                    <a asp-action="DetailsModules" asp-route-id="@item.ModulesId">Details</a> |
+                    <a asp-action="DeleteModules" asp-route-id="@item.ModulesId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

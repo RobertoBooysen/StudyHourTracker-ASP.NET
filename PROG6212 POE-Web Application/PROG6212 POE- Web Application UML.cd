@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PROG6212_POE_Web_Application.Controllers.ChartsController">
+    <Position X="0.5" Y="7.25" Width="2.75" />
+    <InheritanceLine Type="Microsoft.AspNetCore.Mvc.Controller" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="6.441" />
+        <Point X="8.25" Y="6.875" />
+        <Point X="2.375" Y="6.875" />
+        <Point X="2.375" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="_jsonSetting" Type="Newtonsoft.Json.JsonSerializerSettings" FixedToPoint="true">
+      <Path>
+        <Point X="1.938" Y="7.25" />
+        <Point X="1.938" Y="6.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Controllers\ChartsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="_jsonSetting" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Controllers.HomeController">
+    <Position X="4" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAIAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Controllers.ModulesController">
+    <Position X="11" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAAAIQAAAAAAAAAQAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ModulesController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Poe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Controllers.RemainingStudyHoursController">
+    <Position X="6.25" Y="7.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIIAAAAAAAAAACAAAEAAQAAABAAAAA=</HashCode>
+      <FileName>Controllers\RemainingStudyHoursController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Poe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Controllers.UserLoginController">
+    <Position X="14.25" Y="7.25" Width="2.5" />
+    <AssociationLine Name="Poe" Type="PROG6212_POE_Web_Application.Models.PROG6212_POE_PART_TWOContext" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="8.867" />
+        <Point X="15.5" Y="11.938" />
+        <Point X="10.5" Y="11.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAACAAAAEAAAAAAAAAAE=</HashCode>
+      <FileName>Controllers\UserLoginController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Poe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Models.ErrorViewModel">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Models.PROG6212_POE_PART_TWOContext">
+    <Position X="8.25" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAQgAAAAAAAAAAAFAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PROG6212_POE_PART_TWOContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TblModules" />
+      <Property Name="TblRemainingStudyHours" />
+      <Property Name="TblUsers" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Models.TblModule">
+    <Position X="14.25" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAQQAQEAAAAAAAAACAAAAAUAEAAA=</HashCode>
+      <FileName>Models\TblModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Models.TblRemainingStudyHour">
+    <Position X="5.75" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAQBAAQAAAAAAAAACAABAAAAEAAA=</HashCode>
+      <FileName>Models\TblRemainingStudyHour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Models.TblUser">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TblUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Program">
+    <Position X="9.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PROG6212_POE_Web_Application.Startup">
+    <Position X="0.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Configuration" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Mvc.Controller" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.EntityFrameworkCore.DbSet&lt;TEntity&gt;" Collapsed="true">
+    <Position X="8.75" Y="13" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Newtonsoft.Json.JsonSerializerSettings" Collapsed="true">
+    <Position X="1.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Class_Library_POE_Web_Application.ClassLibraryCalculations">
+    <Position X="9" Y="15.5" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Class_Library_POE_Web_Application.DisplayUsername">
+    <Position X="1" Y="15.5" Width="2.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="passUsername" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.String" Collapsed="true">
+    <Position X="1.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Microsoft.Extensions.Configuration.IConfiguration" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

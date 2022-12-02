@@ -1,0 +1,75 @@
+﻿@model PROG6212_POE_Web_Application.Models.TblModule
+
+@{
+    ViewData["Title"] = "DetailsModules";
+}
+
+<style>
+    /*Styling page(W3Schools,2022)*/
+    .header {
+        width: 100%;
+        margin: 50px auto 0px;
+        color: white;
+        background: #84bce0;
+        text-align: center;
+        border: 1px solid #B0C4DE;
+        border-bottom: none;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+    }
+</style>
+
+<div class="header">
+    <!--The header is allocated on top of the form(CodeWithAwa, 2022)-->
+    <h1>Details Modules</h1>
+</div>
+
+<hr />
+
+<dl class="row" style="text-align:center">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ModuleCode)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ModuleCode)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ModuleName)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ModuleName)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ModuleNumberOfCredits)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ModuleNumberOfCredits)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ModuleClassHoursPerWeek)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ModuleClassHoursPerWeek)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.NumberOfWeeks)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.NumberOfWeeks)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.StartDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.StartDate)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.SelfStudyHours)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.SelfStudyHours)
+</dl>
+<div>
+    <a asp-action="EditModules" asp-route-id="@Model.ModulesId">Edit</a> |
+    <a asp-action="ViewModules">Back to list of modules</a>
+</div>

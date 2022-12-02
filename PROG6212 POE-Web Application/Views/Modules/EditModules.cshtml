@@ -1,0 +1,117 @@
+﻿@model PROG6212_POE_Web_Application.Models.TblModule
+
+@{
+    ViewData["Title"] = "EditModules";
+}
+
+<style>
+    /*Styling page(W3Schools,2022)*/
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 20px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: #84bce0;
+        color: white;
+    }
+
+    .btn {
+        padding: 5px 12px;
+        font-size: 15px;
+        color: white;
+        background: #84bce0;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .header {
+        width: 100%;
+        margin: 50px auto 0px;
+        color: white;
+        background: #84bce0;
+        text-align: center;
+        border: 1px solid #B0C4DE;
+        border-bottom: none;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: #84bce0;
+        border: none;
+        border-radius: 15px;
+    }
+</style>
+
+<div class="header">
+    <!--The header is allocated on top of the form(CodeWithAwa, 2022)-->
+    <h1>Edit Modules</h1>
+</div>
+
+<hr />
+
+<div>
+    <div>
+        <form asp-action="EditModules">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ModulesId" />
+            <div class="form-group">
+                <label asp-for="ModuleCode" class="control-label"></label>
+                <input asp-for="ModuleCode" class="form-control" />
+                <span asp-validation-for="ModuleCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModuleName" class="control-label"></label>
+                <input asp-for="ModuleName" class="form-control" />
+                <span asp-validation-for="ModuleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModuleNumberOfCredits" class="control-label"></label>
+                <input asp-for="ModuleNumberOfCredits" class="form-control" />
+                <span asp-validation-for="ModuleNumberOfCredits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModuleClassHoursPerWeek" class="control-label"></label>
+                <input asp-for="ModuleClassHoursPerWeek" class="form-control" />
+                <span asp-validation-for="ModuleClassHoursPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfWeeks" class="control-label"></label>
+                <input asp-for="NumberOfWeeks" class="form-control" />
+                <span asp-validation-for="NumberOfWeeks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ViewModules">Back to list of modules</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,57 @@
+﻿@*Making use of the class libraries class to display username in navbar*@
+@using Class_Library_POE_Web_Application
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+
+    .header {
+        width: 100%;
+        margin: 50px auto 0px;
+        color: white;
+        background: #84bce0;
+        text-align: center;
+        border: 1px solid #B0C4DE;
+        border-bottom: none;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+    }
+
+    p {
+        border: 1px solid #B0C4DE;
+        border-radius: 12px;
+        padding: 5px;
+        border-style: solid;
+        border-width: thick;
+        border-color: #B0C4DE;
+    }
+</style>
+
+<div class="header">
+    <!--The header is allocated on top of the form(CodeWithAwa, 2022)-->
+    <h1>Home</h1>
+</div>
+
+<br />
+
+<div class="text-center">
+    <h3>Welcome @DisplayUsername.passUsername</h3>
+
+    @*Display of image in images folder*@
+    <img src="/Images/Stacked Blue Books.png" alt="Stacked" style="height:165px;width:250px;"   />
+
+    <br /><br />
+
+    <p style="text-align:justify">
+        Navigate to view modules in the navigation bar where you can add, edit, view and delete a module
+        as well as view the information of the modules and the self-study hours will be in a chart to visually see which module require
+        more study time . If you want to calculate the remaining self-study hours of a module after studying navigate to the remaining hours in the navigation
+        bar where you can also add,edit, view and delete information of the calculated remaining self-study hours and view the information
+        in a chart to know which module still requires a lot of study time.
+    </p>
+
+    <br />
+
+</div>
+

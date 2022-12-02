@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "ChartOfRemainingSelfStudyHours";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        //The display and styling of the chart(CanvaJS, 2017)
+        window.onload = function () {
+
+            var result = @Html.Raw(ViewBag.DataPoints2);
+            var dataPoints2 = [];
+            for (var i = 0; i < result.length; i++) {
+                dataPoints2.push({ x: result[i].NumberOfHours, y: result[i].RemainingStudyHours, z: result[i].ModuleName });
+            }
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Remaining Self Study Hours Chart"
+                },
+                axisX: {
+                    title: "Number Of Hours Spent On Module",
+                    logarithmic: true,
+                    maximum: 20
+                },
+                axisY: {
+                    title: "Remaining Study Hours"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: dataPoints2,
+                        indexLabel: "{z}", /*Displaying module name(CanvaJS, 2017)*/
+                    }
+                ]
+            });
+            chart.render();
+
+        };
+    </script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
+
+<div>
+    <a asp-controller="RemainingStudyHours" asp-action="ViewRemainingStudyHours">Back to list of calculated remaining self-study hours</a>
+</div>
+

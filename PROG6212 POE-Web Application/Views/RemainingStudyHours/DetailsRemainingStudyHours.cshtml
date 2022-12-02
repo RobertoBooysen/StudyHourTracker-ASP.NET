@@ -1,0 +1,63 @@
+﻿@model PROG6212_POE_Web_Application.Models.TblRemainingStudyHour
+
+@{
+    ViewData["Title"] = "DetailsRemainingStudyHours";
+}
+
+<style>
+    /*Styling page(W3Schools,2022)*/
+    .header {
+        width: 100%;
+        margin: 50px auto 0px;
+        color: white;
+        background: #84bce0;
+        text-align: center;
+        border: 1px solid #B0C4DE;
+        border-bottom: none;
+        border-radius: 10px 10px 0px 0px;
+        padding: 20px;
+    }
+</style>
+
+<div class="header">
+    <!--The header is allocated on top of the form(CodeWithAwa, 2022)-->
+    <h1>Details Of Remaining Study Hours</h1>
+</div>
+
+<hr />
+<dl class="row" style="text-align:center">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ModuleName)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ModuleName)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.SelfStudyHours)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.SelfStudyHours)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.NumberOfHours)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.NumberOfHours)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.DayOfStudy)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.DayOfStudy)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.RemainingStudyHours)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.RemainingStudyHours)
+    </dd>
+</dl>
+<div>
+    <a asp-action="EditRemainingStudyHours" asp-route-id="@Model.RemainingModulesHoursId">Edit</a> |
+    <a asp-action="ViewRemainingStudyHours">Back to list of remaining study hours</a>
+</div>

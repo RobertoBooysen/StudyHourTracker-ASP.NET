@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "ChartOfSelfStudyHours";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        //The display and styling of the chart(CanvaJS, 2017)
+        window.onload = function () {
+
+            var result = @Html.Raw(ViewBag.DataPoints);
+            var dataPoints = [];
+            for (var i = 0; i < result.length; i++) {
+                dataPoints.push({ y: result[i].SelfStudyHours, z: result[i].ModuleName });
+            }
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Self Study Hours Chart"
+                },
+                axisX: {
+                    title: "Modules ID",
+                    logarithmic: true,
+                    maximum: 20
+                },
+                axisY: {
+                    title: "Self-Study Hours"
+                },
+                data: [
+                    {
+                        type: "column",
+                        dataPoints: dataPoints,
+                        indexLabel: "{z}", /*Displaying module name(CanvaJS, 2017)*/
+
+                    }
+                ]
+            });
+            chart.render();
+
+        };
+    </script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
+
+<br />
+
+<div>
+    <a asp-controller="Modules" asp-action="ViewModules">Back to list of modules</a>
+</div>
+

@@ -1,0 +1,76 @@
+﻿@*Making use of the class libraries class to display username in navbar*@
+@using Class_Library_POE_Web_Application
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PROG6212_POE_Web_Application</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<style>
+    /*Styling for name in navigation bar*/
+    .navbar-brand {
+        float: left;
+        padding: 15px 15px;
+        font-size: 18px;
+        line-height: 20px;
+        font-family: 'Facebook Letter Faces';
+        background-color: #84bce0;
+        color: white;
+    }
+
+    body {
+        background-color: #e6eeff;
+    }
+
+    .footer {
+        background-color: white
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color:white"><b>PROG6212_POE_Part_Three</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" style="color: black;text-shadow: 2px 2px #84bce0;font-size: 20px;"><b><b>Home</b></b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Modules" asp-action="ViewModules" style="color: black;text-shadow: 2px 2px #84bce0;font-size: 20px;"><b><b>Modules</b></b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="RemainingStudyHours" asp-action="ViewRemainingStudyHours" style="color: black;text-shadow: 2px 2px #84bce0;font-size: 20px;"><b><b>Remaining Hours</b></b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="padding-left:175px; color:black;font-size: 18px;"><b>User Logged In: @DisplayUsername.passUsername</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container" style="text-align:center">
+            &copy; 2022 - Author Roberto Booysen- <a href="mailto:robertobooysen11@gmail.com">robertobooysen11@gmail.com</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
